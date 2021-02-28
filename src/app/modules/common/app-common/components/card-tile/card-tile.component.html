@@ -1,0 +1,10 @@
+<div class="card card-stats">
+    <div class="card-header {{styleClass}} card-header-icon">
+        <div class="card-icon">
+            <i class="material-icons">{{icon}}</i>
+        </div>
+        <ng-content select=".card-category"></ng-content>
+        <ng-content select=".card-title"></ng-content>
+    </div>
+    <ng-content select=".card-footer"></ng-content>    
+</div>
