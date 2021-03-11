@@ -1,5 +1,5 @@
 <app-dashboard-statistics></app-dashboard-statistics>
-<div class="row">
+<!-- <div class="row">
     <div class="col-md-4">
         <app-card>
             <div class="card-header card-header-success">
@@ -50,6 +50,40 @@
                 </div>
             </div>
         </div>
+    </div>
+</div> -->
+
+<div class="row">
+    <div class="col-lg-6 col-md-12">
+        <app-card>
+            <div class="card-header card-header-danger">
+                <h5 class="card-title"><span >Bar chart</span></h5>
+            </div>
+            <div class="card-body">
+                <app-bar-chart *ngIf="chartData.length>0" [barChartData]="chartData"></app-bar-chart>
+            </div>
+            <div class="card-footer ">
+                <div class="stats text-center">
+                    <i class="material-icons">access_time</i> Hiring Statistics by month
+                </div>
+            </div>
+        </app-card>
+    </div>
+    <div class="col-lg-6 col-md-12">
+        <app-card>
+            <div class="card-header card-header-success">
+                <h5 class="card-title">
+                    <span >Pie chart</span></h5>
+            </div>
+            <div class="card-body">
+                <app-pie-chart></app-pie-chart>
+            </div>
+            <div class="card-footer text-center">
+                <div class="stats">
+                    <i class="material-icons">access_time</i> Hiring Statistics by Technology
+                </div>
+            </div>
+        </app-card>
     </div>
 </div>
 <div class="row">
@@ -369,3 +403,5 @@
         </div>
     </div>
 </div>
+
+

@@ -4,13 +4,15 @@ import { DashboardContainerComponent } from './containers/dashboard-container/da
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { AppCommonModule } from '../common/app-common/app-common.module';
 import { DashboardStatisticsComponent } from './components/dashboard-statistics/dashboard-statistics.component';
+import { CustomChartsModule } from '../common/charts/charts.module';
 
 @NgModule({
   declarations: [DashboardContainerComponent, DashboardStatisticsComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    AppCommonModule
+    AppCommonModule,
+    CustomChartsModule
   ]
 })
 export class DashboardModule { }
