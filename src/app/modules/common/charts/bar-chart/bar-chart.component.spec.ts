@@ -1,4 +1,6 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ChartsModule } from 'ng2-charts';
 
 import { BarChartComponent } from './bar-chart.component';
 
@@ -8,14 +10,18 @@ describe('BarChartComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BarChartComponent ]
+      imports: [ChartsModule],
+      declarations: [BarChartComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(BarChartComponent);
     component = fixture.componentInstance;
+    component.barChartData = [{ data: [], label: '' }];
     fixture.detectChanges();
   });
 

@@ -1,4 +1,6 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ChartsModule } from 'ng2-charts';
 
 import { PieChartComponent } from './pie-chart.component';
 
@@ -8,9 +10,11 @@ describe('PieChartComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PieChartComponent ]
+      imports: [ChartsModule],
+      declarations: [PieChartComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
