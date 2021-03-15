@@ -1,4 +1,7 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ChartsModule } from 'ng2-charts';
+import { NavigationModule } from 'src/app/modules/common/navigation/navigation.module';
 
 import { DashboardContainerComponent } from './dashboard-container.component';
 
@@ -8,9 +11,11 @@ describe('DashboardContainerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DashboardContainerComponent ]
+      imports: [ChartsModule, NavigationModule],
+      declarations: [DashboardContainerComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
