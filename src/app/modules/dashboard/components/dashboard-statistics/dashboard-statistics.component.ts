@@ -18,5 +18,4 @@ export class DashboardStatisticsComponent implements OnInit {
     this.store.dispatch(new ActionGetTotalApplicaints());
     this.totalApplicants$ = this.store.pipe(select(SelectorTotalApplicants));
   }
-
 }

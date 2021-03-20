@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
 import { Colors, Label } from 'ng2-charts';
 
@@ -8,7 +8,7 @@ import { Colors, Label } from 'ng2-charts';
   templateUrl: './bar-chart.component.html',
   styleUrls: ['./bar-chart.component.scss'],
 })
-export class BarChartComponent implements OnInit {
+export class BarChartComponent {
 
   public barChartOptions: ChartOptions = {
     responsive: true,
@@ -22,12 +22,4 @@ export class BarChartComponent implements OnInit {
   @Input() barChartData!: ChartDataSets[];
   constructor() { }
 
-  ngOnInit() {
-  }
-
-  ngOnChanges() {
-  }
-  ngAfterViewInit() {
-
-  }
 }

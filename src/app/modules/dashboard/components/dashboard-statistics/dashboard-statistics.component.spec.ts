@@ -3,6 +3,8 @@ import { AppCommonModule } from 'src/app/modules/common/app-common/app-common.mo
 import { DashboardState } from '../../store/dashboard.state';
 import { provideMockStore } from '@ngrx/store/testing';
 import { DashboardStatisticsComponent } from './dashboard-statistics.component';
+import { SpyMockStore } from 'src/app/modules/shared/utils/spy-mock-store.spec';
+import { ActionGetTotalApplicaints } from '../../store/actions/dashboard.actions';
 
 describe('DashboardStatisticsComponent', () => {
   let component: DashboardStatisticsComponent;
@@ -29,4 +31,15 @@ describe('DashboardStatisticsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('#ngOnInit should dispatch the correct action', () => {
+    let store = new SpyMockStore<DashboardState>();
+    component.ngOnInit();
+    const action = store.getDispatchedAction<ActionGetTotalApplicaints>();
+    expect(action.type).toEqual(ActionGetTotalApplicaints.TYPE);
+
+    component.totalApplicants$.subscribe(totalCount => {
+      expect(totalCount).toEqual(100);
+    })
+  })
 });
