@@ -1,6 +1,6 @@
 import { Action } from "@ngrx/store";
 
-export class ActionNull implements Action{
+export class ActionNull implements Action {
     static readonly TYPE = 'ACTION_NULL';
     readonly type = ActionNull.TYPE;
     constructor() { }
@@ -8,7 +8,7 @@ export class ActionNull implements Action{
 export class ActionGetTotalApplicaints implements Action {
     static readonly TYPE = 'ACTION_GET_TOTAL_APPLICAINTS';
     readonly type = ActionGetTotalApplicaints.TYPE;
-    constructor() { }
+    constructor(readonly data: string = '') { }
 }
 
 

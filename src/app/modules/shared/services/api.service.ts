@@ -27,7 +27,7 @@ export class ApiService {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     });
   }
-  postRequestWithData<T>(controller: string, method: string, data: string): Observable<T> {
+  postRequestWithData<T>(controller: string, method: string, data: any): Observable<T> {
     return this.http.post<T>(
       this.endPoint + controller + '/' + method,
       data,
