@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActionGetTotalApplicaints } from '@modules/dashboard/store/actions/dashboard.actions';
+import { DashboardState } from '@modules/dashboard/store/dashboard.state';
+import { SelectorTotalApplicants } from '@modules/dashboard/store/selectors/dashboard.selectors';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { ActionGetTotalApplicaints } from '../../store/actions/dashboard.actions';
-import { DashboardState, DashboardStore } from '../../store/dashboard.state';
-import { SelectorTotalApplicants } from '../../store/selectors/dashboard.selectors';
 
 @Component({
   selector: 'app-dashboard-statistics',
@@ -18,5 +18,4 @@ export class DashboardStatisticsComponent implements OnInit {
     this.store.dispatch(new ActionGetTotalApplicaints());
     this.totalApplicants$ = this.store.pipe(select(SelectorTotalApplicants));
   }
-
 }

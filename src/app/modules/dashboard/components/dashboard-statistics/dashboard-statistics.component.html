@@ -1,47 +1,50 @@
 <div class="row">
     <div class="col-lg-3 col-md-6 col-sm-6">
-        <app-card-tile [icon]="'content_copy'" [styleClass]="'card-header-warning'">
+        <app-card-tile [icon]="'all_inbox'" [styleClass]="'card-header-warning'">
             <p class="card-category">Total Applicants</p>
             <h3 class="card-title">{{totalApplicants$ | async}}
                 <small></small>
             </h3>
             <div class="card-footer">
                 <div class="stats">
-                    <i class="material-icons text-danger">warning</i>
-                    <a href="javascript:;">Get More Space...</a>
+                    <i class="material-icons">details</i>
+                    <a href="javascript:;">View Details</a>
                 </div>
             </div>
         </app-card-tile>
     </div>
     <div class="col-lg-3 col-md-6 col-sm-6">
-        <app-card-tile [icon]="'store'" [styleClass]="'card-header-success'">
-            <p class="card-category">Revenue</p>
-            <h3 class="card-title">$34,245</h3>
+        <app-card-tile [icon]="'fact_check'" [styleClass]="'card-header-info'">
+            <p class="card-category">Shortlisted Candidates</p>
+            <h3 class="card-title">94</h3>
             <div class="card-footer">
                 <div class="stats">
-                    <i class="material-icons">date_range</i> Last 24 Hours
+                    <i class="material-icons">details</i>
+                    <a href="javascript:;">View Details</a>
                 </div>
             </div>
         </app-card-tile>
     </div>
     <div class="col-lg-3 col-md-6 col-sm-6">
-        <app-card-tile [icon]="'info_outline'" [styleClass]="'card-header-danger'">
-            <p class="card-category">Fixed Issues</p>
+        <app-card-tile [icon]="'check_box'" [styleClass]="'card-header-success'">
+            <p class="card-category">Hired Candidates</p>
             <h3 class="card-title">75</h3>
             <div class="card-footer">
                 <div class="stats">
-                    <i class="material-icons">local_offer</i> Tracked from Github
+                    <i class="material-icons">details</i>
+                    <a href="javascript:;">View Details</a>
                 </div>
             </div>
         </app-card-tile>
     </div>
     <div class="col-lg-3 col-md-6 col-sm-6">
-        <app-card-tile [icon]="'facebook'" [styleClass]="'card-header-info'">
-            <p class="card-category">Followers</p>
+        <app-card-tile [icon]="'cancel'" [styleClass]="'card-header-danger'">
+            <p class="card-category">Rejected Candidates</p>
             <h3 class="card-title">+245</h3>
             <div class="card-footer">
                 <div class="stats">
-                    <i class="material-icons">update</i> Just Updated
+                    <i class="material-icons">details</i>
+                    <a href="javascript:;">View Details</a>
                 </div>
             </div>
         </app-card-tile>

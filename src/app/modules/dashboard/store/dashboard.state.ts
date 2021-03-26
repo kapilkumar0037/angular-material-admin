@@ -5,8 +5,3 @@ export interface DashboardState {
 export const initialDasboardState: DashboardState = {
     totalUserCount: 0
 };
-
-
-export interface DashboardStore {
-    dashboard: DashboardState;
-}

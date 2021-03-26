@@ -1,7 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { NavigationModule } from '@modules/common/navigation/navigation.module';
 import { ChartsModule } from 'ng2-charts';
-import { NavigationModule } from 'src/app/modules/common/navigation/navigation.module';
 
 import { DashboardContainerComponent } from './dashboard-container.component';
 
