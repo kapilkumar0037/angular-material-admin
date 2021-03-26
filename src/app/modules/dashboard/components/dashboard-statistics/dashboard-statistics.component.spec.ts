@@ -1,10 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { AppCommonModule } from 'src/app/modules/common/app-common/app-common.module';
-import { DashboardState } from '../../store/dashboard.state';
+import { AppCommonModule } from '@modules/common/app-common/app-common.module';
+import { ActionGetTotalApplicaints } from '@modules/dashboard/store/actions/dashboard.actions';
+import { DashboardState } from '@modules/dashboard/store/dashboard.state';
+import { SpyMockStore } from '@modules/shared/utils/spy-mock-store.spec';
 import { provideMockStore } from '@ngrx/store/testing';
 import { DashboardStatisticsComponent } from './dashboard-statistics.component';
-import { SpyMockStore } from 'src/app/modules/shared/utils/spy-mock-store.spec';
-import { ActionGetTotalApplicaints } from '../../store/actions/dashboard.actions';
 
 describe('DashboardStatisticsComponent', () => {
   let component: DashboardStatisticsComponent;
